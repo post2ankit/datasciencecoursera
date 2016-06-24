@@ -11,11 +11,11 @@ makeCacheMatrix <- function(x = matrix()){
 }
 
 cacheSolve <- function (x, ...){
-  inverse <- x$getInvMatrix
+  inverse <- x$getInvMatrix()
   if (!is.null(inverse)){
     return(inverse)
   }
-  inverse <- solve(x$get)
+  inverse <- solve(x$get())
   x$setInvMatrix(inverse)
   return(inverse)
 } 
