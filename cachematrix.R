@@ -13,6 +13,7 @@ makeCacheMatrix <- function(x = matrix()){
 cacheSolve <- function (x, ...){
   inverse <- x$getInvMatrix()
   if (!is.null(inverse)){
+    message("returning cached value of inversed matrix !!!")
     return(inverse)
   }
   inverse <- solve(x$get())
